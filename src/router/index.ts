@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
+import SignIn from '../views/signIn.vue'
 import commonRouter from './common'
 
 Vue.use(VueRouter)
@@ -8,8 +8,8 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'SignIn',
+        component: SignIn
     },
     // {
     //     path: '/about',
@@ -21,7 +21,7 @@ const routes: Array<RouteConfig> = [
     // },
     ...commonRouter
 ]
-
+console.log(routes)
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
