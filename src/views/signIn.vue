@@ -12,7 +12,7 @@
             </v-col>
         </v-row>
         <v-card class="content">
-            <img class="logo-img" src="../assets/img/dambee.png">
+            <img class="logo-img" src="../assets/img/loginLogo.png">
             <v-form class="sign-in-form ma-15">
             <v-text-field
             placeholder="아이디를 입력하세요"
