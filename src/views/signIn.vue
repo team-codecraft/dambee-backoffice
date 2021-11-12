@@ -61,6 +61,8 @@
 <style scoped>
 * {
     font-family: 'Spoqa Han Sans Neo';
+    word-break: keep-all;
+    box-sizing: border-box;
 }
 
 .background {
