@@ -25,47 +25,18 @@
                     검색조건
                 </h5>
                 <v-col cols="12 pa-0">
-                    <v-menu offset-y>
-      <template v-slot:activator="{ on, attrs }">
-        <v-text-field
-    class="search-drop-down1"
-            placeholder="상품분류                                                  ▾"
-            outlined
-            v-bind="attrs"
-            v-on="on"
-            readonly
-            height="48px"
-            ></v-text-field>
-      </template>
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-                <v-menu offset-y>
-      <template v-slot:activator="{ on, attrs }">
-        <v-text-field
-    class="search-drop-down2"
-            placeholder="사용여부                          ▾"
-            outlined
-            v-bind="attrs"
-            v-on="on"
-            readonly
-            ></v-text-field>
-      </template>
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+      <v-select
+      class="search-drop-down1"
+          :items="items"
+          label="상품분류"
+          outlined
+        ></v-select>
+                <v-select
+      class="search-drop-down2"
+          :items="items"
+          label="사용여부"
+          outlined
+        ></v-select>
     <v-text-field
     class="search-text-field"
             placeholder="금융사명, 상품명 검색"
@@ -128,7 +99,38 @@
       ></v-pagination>
     </div>
   </div>
+            </v-row>
 
+            <!-- 상품 신규 등록 페이지 -->
+
+        <v-row class="content-header mb-13" justify="space-between">
+            <v-col class="pa-0" align-self="center">
+                <h2 class="content-title">
+                    상품 신규 등록
+                </h2>
+            </v-col>
+        </v-row>
+         <v-row class="search-container mb-13" justify="space-between">
+                <h5 class="search-title">
+                    분류 선택
+                </h5>
+                <v-col cols="12" align-self="center">
+                    <v-radio-group class="radio-center" v-model="row"
+      row>
+      <v-radio
+        label="부동산 담보 대출"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+        label="전세 자금 대출"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+        label="신용 대출"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                </v-col>
             </v-row>
     </v-container>
 </template>
@@ -137,10 +139,10 @@
     export default {
         data: () => ({
       items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' },
+        '상품분류',
+        '사용여부',
+        'select',
+        'items'
       ],
       page: 1,
         headers: [
@@ -301,6 +303,10 @@
     background-color: #ffffff !important;
 }
 
+.radio-center {
+
+}
+
 </style>
 
 <style>
@@ -318,6 +324,10 @@
 
 .list-table-container > .list-table-margin td {
     border: 1px solid #e3e3e3;
+}
+
+.radio-center .v-input--radio-group__input {
+    justify-content: space-around;
 }
 
 </style>
