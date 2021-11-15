@@ -16,10 +16,13 @@
             <v-form class="sign-in-form ma-15">
             <v-text-field
             placeholder="아이디를 입력하세요"
-            outlined></v-text-field>
+            outlined
+            ></v-text-field>
             <v-text-field
             placeholder="비밀번호를 입력하세요"
-            outlined></v-text-field>
+            outlined
+            type="password"
+            ></v-text-field>
             <v-checkbox
               class="id-checkobx"
               v-model="checkbox"
@@ -63,6 +66,7 @@
     font-family: 'Spoqa Han Sans Neo';
     word-break: keep-all;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .background {

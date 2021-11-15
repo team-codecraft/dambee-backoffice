@@ -37,8 +37,10 @@
 
           <router-link to="/users">
       <v-list-item class="category-users">
+        <div class="category-left-side">
+        </div>
           <v-list-item-icon>
-            <v-icon>mdi-account-box-outline</v-icon>
+            <v-icon class="category-left-margin">mdi-account-box-outline</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -67,6 +69,7 @@
           v-for="item in operations"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -97,6 +100,7 @@
           v-for="item in products"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -127,6 +131,7 @@
           v-for="item in loan"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -157,6 +162,7 @@
           v-for="item in board"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -187,6 +193,7 @@
           v-for="item in rates"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -217,6 +224,7 @@
           v-for="item in adjustment"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -247,6 +255,7 @@
           v-for="item in system"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -277,6 +286,7 @@
           v-for="item in report"
           :key="item.title"
           link
+          :to="item.to"
         >
           <v-list-item-icon>
           </v-list-item-icon>
@@ -288,10 +298,10 @@
       </v-list>
 
     </v-navigation-drawer>
-    <v-main>
-        <v-container fluid>
+    <v-main class="main-background">
+        <!-- <v-container fluid> -->
             <router-view />
-        </v-container>
+        <!-- </v-container> -->
     </v-main>
     </div>
 </template>
@@ -302,53 +312,53 @@
         data () {
       return {
         operations: [
-          { title: '관리자 관리', to: '/operations' },
-          { title: '상담사 관리' },
-          { title: '제휴 부동산 관리' },
+          { title: '관리자 관리', to: '/operations/manager' },
+          { title: '상담사 관리', to: '/operations/counselor' },
+          { title: '제휴 부동산 관리', to: '/operations/real-estate' },
         ],
         products: [
-          { title: '상품 관리' },
-          { title: '금융사 관리' },
-          { title: '우대 금리 관리' },
-          { title: '가산 글미 관리' },
+          { title: '상품 관리', to: '/products/product' },
+          { title: '금융사 관리', to: '/products/finance' },
+          { title: '우대 금리 관리', to: '/products/prime-rate' },
+          { title: '가산 글미 관리', to: '/products/spread' },
         ],
         loan: [
-          { title: '금융사 상감사 연결' },
-          { title: '담비 상담사 연결' },
-          { title: '비대면 연결' },
+          { title: '금융사 상담사 연결', to: '/loan/finance' },
+          { title: '담비 상담사 연결', to: '/loan/dambee' },
+          { title: '비대면 연결', to: '/loan/untact' },
         ],
         board: [
-          { title: '사용자 Q&A' },
-          { title: '사용자 FAQ' },
-          { title: '상담사 Q&A' },
-          { title: '상담사 FAQ' },
-          { title: '사용자 공지사항' },
-          { title: '상담사 공지사항' },
-          { title: '금융 뉴스' },
-          { title: '금리 정보' },
+          { title: '사용자 Q&A', to: '/board/user-QNA' },
+          { title: '사용자 FAQ', to: '/board/user-FAQ' },
+          { title: '상담사 Q&A', to: '/board/counselor-QNA' },
+          { title: '상담사 FAQ', to: '/board/counselor-FAQ' },
+          { title: '사용자 공지사항', to: '/board/user-notice' },
+          { title: '상담사 공지사항', to: '/board/counselor-notice' },
+          { title: '금융 뉴스', to: '/board/news' },
+          { title: '금리 정보', to: '/board/info' },
         ],
         rates: [
-          { title: 'KB 시세 관리' },
-          { title: '대출 금리 관리' },
+          { title: 'KB 시세 관리', to: '/rates/kb' },
+          { title: '대출 금리 관리', to: '/rates/loan' },
         ],
         adjustment: [
-          { title: '담비 상담사 연결' },
-          { title: '금융사 연결' },
-          { title: '비대면 연결' },
+          { title: '담비 상담사 연결', to: '/adjustment/dambee' },
+          { title: '금융사 연결', to: '/adjustment/finance' },
+          { title: '비대면 연결', to: '/adjustment/untact' },
         ],
         system: [
-          { title: '서버 모니터링' },
-          { title: '백업 시스템 모니터링' },
-          { title: '정보 시스템 사용 이력' },
+          { title: '서버 모니터링', to: '/system/server' },
+          { title: '백업 시스템 모니터링', to: '/system/backup' },
+          { title: '정보 시스템 사용 이력', to: '/system/info' },
         ],
         report: [
-          { title: '유저 가입수' },
-          { title: '상담사 가입수' },
-          { title: '앱 다운로드수' },
-          { title: '앱 접속수' },
-          { title: '랜딩 페이지 접속수' },
-          { title: '금융사 상담 현황' },
-          { title: '지역별 상담 현황' },
+          { title: '유저 가입수', to: '/report/users' },
+          { title: '상담사 가입수', to: '/report/counselors' },
+          { title: '앱 다운로드수', to: '/report/app-downloads' },
+          { title: '앱 접속수', to: '/report/app-connections' },
+          { title: '랜딩 페이지 접속수', to: '/report/page-connections' },
+          { title: '금융사 상담 현황', to: '/report/finance-consultings' },
+          { title: '지역별 상담 현황', to: '/report/regional-consultings' },
         ],
         right: null,
       }
@@ -427,6 +437,18 @@
     background-color: #a3583d;
 }
 
+.category-left-side {
+  position: absolute;
+  width: 4.06px;
+  height: 100%;
+  background: #ff6934;
+  left: 0;
+}
+
+.category-left-margin {
+  margin-right: 32px;
+}
+
 .category {
     background-color: #484745;
     border-bottom: 1px solid #9d9b99;
@@ -441,6 +463,10 @@
     margin: 0 !important;
     border-radius: 0 !important;
     padding: 0px 16px 0px !important;
+}
+
+.main-background {
+  background-color: #f8f8f8;
 }
 
 </style>

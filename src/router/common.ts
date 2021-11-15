@@ -10,7 +10,7 @@ const commonRouter = [
         component: () => import('@/views/users/user.vue')
     },
     {
-        path: '/operations',
+        path: '/operations/manager',
         name: 'Operations',
         component: () => import('@/views/operations/manager.vue')
     },
@@ -25,7 +25,7 @@ const commonRouter = [
         component: () => import('@/views/operations/realEstate.vue')
     },
     {
-        path: '/products',
+        path: '/products/product',
         name: 'Products',
         component: () => import('@/views/products/product.vue')
     },
@@ -45,7 +45,7 @@ const commonRouter = [
         component: () => import('@/views/products/spread.vue')
     },
     {
-        path: '/loan',
+        path: '/loan/finance',
         name: 'Loan',
         component: () => import('@/views/loan/financeCounselor.vue')
     },
@@ -60,7 +60,7 @@ const commonRouter = [
         component: () => import('@/views/loan/untact.vue')
     },
     {
-        path: '/board',
+        path: '/board/user-QNA',
         name: 'Board',
         component: () => import('@/views/board/userQna.vue')
     },
@@ -100,7 +100,7 @@ const commonRouter = [
         component: () => import('@/views/board/info.vue')
     },
     {
-        path: '/rates',
+        path: '/rates/kb',
         name: 'Rates',
         component: () => import('@/views/rates/kb.vue')
     },
@@ -110,7 +110,7 @@ const commonRouter = [
         component: () => import('@/views/rates/loan.vue')
     },
     {
-        path: '/adjustment',
+        path: '/adjustment/dambee',
         name: 'Adjustment',
         component: () => import('@/views/adjustment/dambee.vue')
     },
@@ -125,7 +125,7 @@ const commonRouter = [
         component: () => import('@/views/adjustment/untact.vue')
     },
     {
-        path: '/system',
+        path: '/system/server',
         name: 'System',
         component: () => import('@/views/system/server.vue')
     },
@@ -140,7 +140,7 @@ const commonRouter = [
         component: () => import('@/views/system/info.vue')
     },
     {
-        path: '/report',
+        path: '/report/users',
         name: 'Report',
         component: () => import('@/views/report/users.vue')
     },
