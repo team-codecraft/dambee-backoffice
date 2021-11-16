@@ -801,6 +801,14 @@ line-height: 28px;
   line-height: 30px;
 }
 
+.rate-table-item {
+
+}
+
+.rate-table-item > .prime-add-delete-container {
+
+}
+
 .prime-select {
   max-width: 235px;
 }
