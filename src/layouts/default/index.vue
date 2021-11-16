@@ -320,7 +320,7 @@
           { title: '상품 관리', to: '/products/product' },
           { title: '금융사 관리', to: '/products/finance' },
           { title: '우대 금리 관리', to: '/products/prime-rate' },
-          { title: '가산 글미 관리', to: '/products/spread' },
+          { title: '가산 금리 관리', to: '/products/spread' },
         ],
         loan: [
           { title: '금융사 상담사 연결', to: '/loan/finance' },
