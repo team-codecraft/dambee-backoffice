@@ -7,7 +7,6 @@
                     </h2>
                 </v-col>
                 <v-col class="pa-0" align-self="center">
-
                   <v-btn
                     class="new-btn"
                     color="#ff6934"
@@ -81,7 +80,7 @@
       hide-default-footer
       class="list-table-margin elevation-1"
     >
-        <template v-slot:item.view="{ item }">
+        <template v-slot:[`item.view`]="{ item }">
       <v-chip
       color="#000000"
       light
@@ -102,6 +101,7 @@
             </v-row>
 
             <!-- 상품 신규 등록 페이지 -->
+            <hr class="hrhrhr">
 
         <v-row class="content-header mb-13" justify="space-between">
             <v-col class="pa-0" align-self="center">
@@ -110,28 +110,56 @@
                 </h2>
             </v-col>
         </v-row>
+
          <v-row class="search-container mb-13" justify="space-between">
                 <h5 class="search-title">
                     분류 선택
                 </h5>
                 <v-col cols="12" align-self="center">
-                    <v-radio-group class="radio-center" v-model="row"
+                    <v-radio-group class="radio-center"
       row>
       <v-radio
+      class="radio-btn"
         label="부동산 담보 대출"
         color="#ff6934"
       ></v-radio>
       <v-radio
+      class="radio-btn"
         label="전세 자금 대출"
         color="#ff6934"
       ></v-radio>
       <v-radio
+      class="radio-btn"
         label="신용 대출"
         color="#ff6934"
       ></v-radio>
     </v-radio-group>
                 </v-col>
             </v-row>
+
+            <v-row class="radio-submit-btn-container-row" justify="center">
+              <v-col class="radio-submit-btn-container-col" cols="4">
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
+                height="48px"
+                dark
+                color="#ff6934"
+                >
+                  다음
+                </v-btn>
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  취소
+                </v-btn>
+              </v-col>
+            </v-row>
+
     </v-container>
 </template>
 
@@ -303,8 +331,23 @@
     background-color: #ffffff !important;
 }
 
-.radio-center {
+.hrhrhr {
+  width: 100%;
+  margin: 100px;
+}
 
+.radio-submit-btn-container-row {
+  margin: 100px 0px 0px 0px;
+}
+
+.radio-submit-btn-container-row > .radio-submit-btn-container-col {
+  text-align: center;
+}
+
+.radio-submit-btn-container-row > .radio-submit-btn-container-col > .radio-submit-btn {
+  margin: 0px 5px 0px;
+  font-size: 20px;
+  line-height: 34px;
 }
 
 </style>
@@ -328,6 +371,12 @@
 
 .radio-center .v-input--radio-group__input {
     justify-content: space-around;
+}
+
+.radio-center .radio-btn .v-label {
+  font-size: 20px;
+  line-height: 34px;
+  color: #121212;
 }
 
 </style>
