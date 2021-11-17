@@ -100,7 +100,7 @@
   </div>
             </v-row>
 
-            <!-- 00_01.상품관리_상품신규등록_상품분류선택 -->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 00_01.상품관리_상품신규등록_상품분류선택 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <hr class="hrhrhr">
 
         <v-row class="content-header mb-13" justify="space-between">
@@ -160,12 +160,1239 @@
               </v-col>
             </v-row>
 
-            <!-- 00_01.상품관리_상품 신규 등록_상품 정보 입력 (부담대) -->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 00_01.상품관리_상품 신규 등록_상품 정보 입력 (부담대) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <hr class="hrhrhr">
 
             <v-row class="real-estate-info-container mb-13">
               <h5 class="-title">
                 부동산 담보 대출 정보
+              </h5>
+              <span class="-subtitle">
+                (*가 표시된 사항은 필수 입력 정보입니다.)
+              </span>
+
+              <div class="real-estate-info-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *상담 신청 경로
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                      <v-select
+      class="path-select"
+      dense
+          :items="items"
+          label="신청 경로 선택"
+          outlined
+        ></v-select>
+        <v-text-field
+        dense
+    class="path-text-field"
+            label="http://"
+            outlined
+            ></v-text-field>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *금융권 분류
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                  <v-row class="path-container">
+                    <v-select
+      class="finance-select"
+      dense
+          :items="items"
+          label="은행권/비은행권"
+          outlined
+          error-messages="금융권 분류를 선택하세요"
+        ></v-select>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      *금융 회사
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-select
+      class="finance-select"
+      dense
+          :items="items"
+          label="금융사 선택"
+          outlined
+          error-messages="금융회사를 선택하세요"
+        ></v-select>
+                  </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *금융 상품명
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+    class="finance-product-text-field"
+            label="금융 상품명"
+            outlined
+            error-messages="금융 상품명을 입력하세요"
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      *상품 코드
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+    class="finance-product-text-field"
+            label="상품코드"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      한도 금액
+                    <div class="item-name-small">
+                      (비입력시 LTV비례)
+                    </div>
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            placeholder="입력하세요"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+
+              <div class="real-estate-info-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *기준 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="기준금리"
+            outlined
+            error
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      *가산 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="가산금리"
+            outlined
+            error
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *최고 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="최고금리"
+            outlined
+            error
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      *최저 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="최저금리"
+            outlined
+            error
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *상품 안내
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                <div class="err-message">
+            <img class="err-img" src="../../assets/img/err.png" />
+            <span>상품 안내를 입력하세요</span>
+            </div>
+                    </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      *금리 정보
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                <div class="err-message">
+            <img class="err-img" src="../../assets/img/err.png" />
+            <span>금리 정보를 입력하세요</span>
+            </div>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *유의 사항
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                <div class="err-message">
+            <img class="err-img" src="../../assets/img/err.png" />
+            <span>유의사항을 입력하세요</span>
+            </div>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-row>
+
+            <v-row class="prime-rate-container mb-13">
+              <h5 class="-title">
+                우대금리 설정
+              </h5>
+
+              <div class="prime-rate-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      최대 우대금리 설정
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            placeholder="최대 우대금리 설정"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      우대금리 한계 그룹 및 중복 그룹 설정
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row-height" no-gutters>
+                  <v-col class="rate-table-item-name">
+                    <div>
+                      우대 금리 관리
+                    </div>
+                  </v-col>
+                  <v-col class="rate-table-item">
+                    <div class="prime-add-delete-container">
+                      <v-row class="prime-add" no-gutters align-content="center">
+                        <div class="margin-right">
+                                                  <v-select
+                        class="prime-select"
+                        dense
+          :items="items"
+          label="우대 금리 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right">
+                          <v-text-field
+        dense
+        reverse
+    class="prime-text-field"
+            placeholder="0.1"
+            readonly
+            outlined
+            ></v-text-field>
+                        </div>
+                        <div class="margin-right">
+                          <v-btn
+                          class="tip-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  설명
+                </v-btn>
+                        </div>
+                        <div class="margin-right">
+                          <v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="한계 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right"><v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="중복 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div>
+                          <v-btn
+                          class="delete-btn"
+                          width="90px"
+                height="42px"
+                light
+                color="#ffffff"
+                >
+                  삭제
+                </v-btn>
+                        </div>
+                      </v-row>
+                      <v-row class="prime-add" no-gutters>
+                        <div class="margin-right">
+                                                  <v-select
+                        class="prime-select"
+                        dense
+          :items="items"
+          label="우대 금리 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right">
+                          <v-text-field
+        dense
+        reverse
+    class="prime-text-field"
+            placeholder="0.1"
+            readonly
+            outlined
+            ></v-text-field>
+                        </div>
+                        <div class="margin-right">
+                          <v-btn
+                          class="tip-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  설명
+                </v-btn>
+                        </div>
+                        <div class="margin-right">
+                          <v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="한계 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right"><v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="중복 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div>
+                          <v-btn
+                          class="add-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#484746"
+                >
+                  추가
+                </v-btn>
+                        </div>
+                      </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-row>
+
+                        <v-row class="prime-rate-container mb-13">
+              <h5 class="-title">
+                가산금리 설정
+              </h5>
+
+              <div class="prime-rate-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      최대 가산금리 설정
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            placeholder="최대 가산금리 설정"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      가산금리 한계 그룹 및 중복 그룹 설정
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row-height" no-gutters>
+                  <v-col class="rate-table-item-name">
+                    <div>
+                      가산 금리 관리
+                    </div>
+                  </v-col>
+                  <v-col class="rate-table-item">
+                    <div class="prime-add-delete-container">
+                      <v-row class="prime-add" no-gutters align-content="center">
+                        <div class="margin-right">
+                                                  <v-select
+                        class="prime-select"
+                        dense
+          :items="items"
+          label="가산 금리 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right">
+                          <v-text-field
+        dense
+        reverse
+    class="prime-text-field"
+            placeholder="0.1"
+            readonly
+            outlined
+            ></v-text-field>
+                        </div>
+                        <div class="margin-right">
+                          <v-btn
+                          class="tip-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  설명
+                </v-btn>
+                        </div>
+                        <div class="margin-right">
+                          <v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="한계 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right"><v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="중복 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div>
+                          <v-btn
+                          class="delete-btn"
+                          width="90px"
+                height="42px"
+                light
+                color="#ffffff"
+                >
+                  삭제
+                </v-btn>
+                        </div>
+                      </v-row>
+                      <v-row class="prime-add" no-gutters>
+                        <div class="margin-right">
+                                                  <v-select
+                        class="prime-select"
+                        dense
+          :items="items"
+          label="가산 금리 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right">
+                          <v-text-field
+        dense
+        reverse
+    class="prime-text-field"
+            placeholder="0.1"
+            readonly
+            outlined
+            ></v-text-field>
+                        </div>
+                        <div class="margin-right">
+                          <v-btn
+                          class="tip-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  설명
+                </v-btn>
+                        </div>
+                        <div class="margin-right">
+                          <v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="한계 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div class="margin-right"><v-select
+                        class="prime-group-select"
+                        dense
+          :items="items"
+          label="중복 그룹 선택"
+          outlined
+        ></v-select>
+                        </div>
+                        <div>
+                          <v-btn
+                          class="add-btn"
+                          width="90px"
+                height="42px"
+                dark
+                color="#484746"
+                >
+                  추가
+                </v-btn>
+                        </div>
+                      </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-row>
+
+            <v-row class="finance-info-display-container mb-13">
+              <h5 class="-title">
+                    금융상품 정보 표시 여부
+                </h5>
+
+                <div class="prime-rate-table">
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      변동 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                  <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      혼합 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                </v-row>
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      고정 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item-last">
+                    <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name-invisible">
+                    <div>
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row >
+                  </v-row>
+                  </v-col>
+                </v-row>
+                </div>
+
+                <div class="prime-rate-table">
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      원리금 균등 상환
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                  <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      원금 균등 상환
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                </v-row>
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      만기일시 상환
+                    </div>
+                  </v-col>
+                  <v-col class="table-item-last">
+                    <v-row class="use-radio-btn-container" align-content="center">
+                    <v-radio-group class="use-radio-group" row>
+      <v-radio
+      class="radio-btn"
+        label="사용"
+        color="#ff6934"
+      ></v-radio>
+      <v-radio
+      class="radio-btn"
+        label="비사용"
+        color="#ff6934"
+      ></v-radio>
+    </v-radio-group>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name-invisible">
+                    <div>
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row>
+                  </v-row>
+                  </v-col>
+                </v-row>
+                </div>
+            </v-row>
+
+            <v-row class="finance-info-display-container mb-13">
+              <h5 class="-title">
+                    상품정보
+                </h5>
+
+                                <div class="prime-rate-table">
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      상품 설명서
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container" align-content="center" no-gutters>
+                      <v-col>
+                    <v-text-field
+        dense
+    class="file-name-field"
+            placeholder="파일명..."
+            outlined
+            readonly
+            ></v-text-field>
+                        <v-btn
+                          class="upload-btn"
+                          width="105px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  업로드
+                </v-btn>
+                <v-btn
+                          class="delete-btn"
+                          width="119px"
+                height="42px"
+                light
+                color="#ffffff"
+                >
+                  미리보기
+                </v-btn>
+                      </v-col>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      청약철회 및 약관
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container" align-content="center" no-gutters>
+                      <v-col>
+                    <v-text-field
+        dense
+    class="file-name-field"
+            placeholder="파일명..."
+            outlined
+            readonly
+            ></v-text-field>
+                        <v-btn
+                          class="upload-btn"
+                          width="105px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  업로드
+                </v-btn>
+                <v-btn
+                          class="delete-btn"
+                          width="119px"
+                height="42px"
+                light
+                color="#ffffff"
+                >
+                  미리보기
+                </v-btn>
+                      </v-col>
+            </v-row>
+                  </v-col>
+                </v-row>
+                  <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      상품 광고 이미지
+                    </div>
+                  </v-col>
+                  <v-col class="table-item-last">
+                    <v-row class="path-container" align-content="center" no-gutters>
+                      <v-col>
+                    <v-text-field
+        dense
+    class="file-name-field"
+            placeholder="파일명..."
+            outlined
+            readonly
+            ></v-text-field>
+                        <v-btn
+                          class="upload-btn"
+                          width="105px"
+                height="42px"
+                dark
+                color="#ff6934"
+                >
+                  업로드
+                </v-btn>
+                <v-btn
+                          class="delete-btn"
+                          width="119px"
+                height="42px"
+                light
+                color="#ffffff"
+                >
+                  미리보기
+                </v-btn>
+                      </v-col>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name-invisible">
+                    <div>
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row >
+                  </v-row>
+                  </v-col>
+                </v-row>
+                </div>
+            </v-row>
+
+              <v-row class="finance-info-display-container mb-13">
+                <div class="manager-memo-table">
+                  <v-row class="memo-table-row">
+                    <v-col class="memo-item-name">
+                      <div>
+                        관리자 메모
+                        <br>
+                        (500자 이내)
+                      </div>
+                    </v-col>
+                    <v-col class="memo-item">
+                      <v-textarea
+                      class="memo-text-area"
+                      height="170px"
+          solo
+          name="input-7-4"
+          label="메모 작성 가능"
+          no-resize
+        ></v-textarea>
+                    </v-col>
+                  </v-row>
+                </div>
+                </v-row>
+
+                <v-row class="radio-submit-btn-container-row" justify="center">
+              <v-col class="radio-submit-btn-container-col" cols="4">
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
+                height="48px"
+                dark
+                color="#ff6934"
+                >
+                  등록
+                </v-btn>
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  닫기
+                </v-btn>
+              </v-col>
+            </v-row>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@(전세)@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2-->
+            <hr class="hrhrhr">
+
+            <v-row class="real-estate-info-container mb-13">
+              <h5 class="-title">
+                전세 자금 대출 기본정보
+              </h5>
+              <span class="-subtitle">
+                (*가 표시된 사항은 필수 입력 정보입니다.)
+              </span>
+
+              <div class="real-estate-info-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *상담 신청 경로
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                      <v-select
+      class="path-select"
+      dense
+          :items="items"
+          label="신청 경로 선택"
+          outlined
+        ></v-select>
+        <v-text-field
+        dense
+    class="path-text-field"
+            label="http://"
+            outlined
+            ></v-text-field>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      *금융권 분류
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                  <v-row class="path-container">
+                    <v-select
+      class="finance-select"
+      dense
+          :items="items"
+          label="은행권/비은행권"
+          outlined
+        ></v-select>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      금융 회사
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-select
+      class="finance-select"
+      dense
+          :items="items"
+          label="금융사 선택"
+          outlined
+        ></v-select>
+                  </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      금융 상품명
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+    class="finance-product-text-field"
+            label="금융 상품명"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      상품 코드
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+    class="finance-product-text-field"
+            label="상품코드"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      보증 주체
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-select
+      class="finance-select"
+      dense
+          :items="items"
+          label="보증 주체 선택"
+          outlined
+        ></v-select>
+                  </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      한도 금액
+                    <div class="item-name-small">
+                      (비입력시 LTV비례)
+                    </div>
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            placeholder="입력하세요"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+
+              <div class="real-estate-info-table">
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      기준 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="기준금리"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      가산 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="가산금리"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      최고 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="최고금리"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      최저 금리
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="path-container">
+                    <v-text-field
+        dense
+        reverse
+    class="finance-product-text-field"
+            label="최저금리"
+            outlined
+            ></v-text-field>
+            </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      상품 안내
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                    </v-row>
+                  </v-col>
+                  <v-col class="table-item-name">
+                    <div>
+                      금리 정보
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row class="table-row" no-gutters>
+                  <v-col class="table-item-name">
+                    <div>
+                      유의 사항
+                    </div>
+                  </v-col>
+                  <v-col class="table-item">
+                    <v-row class="edit-btn-container">
+                    <v-btn
+                class="eidt-btn"
+                height="48px"
+                dark
+                color="#484746"
+                >
+                  편집
+                </v-btn>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-row>
+
+          <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@(신용)@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2-->
+            <hr class="hrhrhr">
+
+            <v-row class="real-estate-info-container mb-13">
+              <h5 class="-title">
+                신용 대출 정보
               </h5>
               <span class="-subtitle">
                 (*가 표시된 사항은 필수 입력 정보입니다.)
@@ -298,7 +1525,7 @@
         dense
         reverse
     class="finance-product-text-field"
-            placeholder="기준금리"
+            label="기준금리"
             outlined
             ></v-text-field>
             </v-row>
@@ -314,7 +1541,7 @@
         dense
         reverse
     class="finance-product-text-field"
-            placeholder="가산금리"
+            label="가산금리"
             outlined
             ></v-text-field>
             </v-row>
@@ -332,7 +1559,7 @@
         dense
         reverse
     class="finance-product-text-field"
-            placeholder="최고금리"
+            label="최고금리"
             outlined
             ></v-text-field>
             </v-row>
@@ -348,7 +1575,7 @@
         dense
         reverse
     class="finance-product-text-field"
-            placeholder="최저금리"
+            label="최저금리"
             outlined
             ></v-text-field>
             </v-row>
@@ -412,70 +1639,301 @@
               </div>
             </v-row>
 
-            <v-row class="prime-rate-container">
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@(00_01.상품관리_상품 신규 등록_상품 정보 입력 (공통)_우대금리 한계 그룹 및 중복 그룹 설정)@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2-->
+            <hr class="hrhrhr">
+
+                    <v-row class="content-header mb-13" justify="space-between">
+            <v-col class="pa-0" align-self="center">
+                <h2 class="content-title">
+                    우대금리 한계 그룹 및 중복 그룹 설정
+                </h2>
+            </v-col>
+        </v-row>
+
+        <v-row class="finance-info-display-container mb-13">
               <h5 class="-title">
-                우대금리 설정
+                우대금리 한계 그룹 설정
               </h5>
 
-              <div class="prime-rate-table">
-                <v-row class="table-row" no-gutters>
-                  <v-col class="table-item-name">
-                    <div>
-                      최대 우대금리 설정
-                    </div>
-                  </v-col>
-                  <v-col class="table-item">
-                    <v-row class="path-container">
-                    <v-text-field
+                <div class="prime-limit-table">
+                  <v-row class="prime-limit-table-head" no-gutters>
+                    <v-col class="table-start-end items">
+                      <div>
+                        No.
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        우대금리 한계 명
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        금리
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        관리
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        1
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
         dense
-        reverse
-    class="finance-product-text-field"
-            placeholder="최대 우대금리 설정"
+            label="그룹명 입력"
             outlined
             ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+        reverse
+            label="한계금리 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#ffffff"
+                        width="170px"
+                        height="42px"
+                        light
+                        >
+                        삭제
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                                    <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        2
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+            label="그룹명 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+        reverse
+            label="한계금리 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#ffffff"
+                        width="170px"
+                        height="42px"
+                        light
+                        >
+                        삭제
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                                    <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        3
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+            label="그룹명 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+        reverse
+            label="한계금리 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#484746"
+                        width="170px"
+                        height="42px"
+                        dark
+                        >
+                        추가
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </div>
             </v-row>
-                  </v-col>
-                  <v-col class="table-item-name">
-                    <div>
-                      우대금리 한계 그룹 및 중복 그룹 설정
-                    </div>
-                  </v-col>
-                  <v-col class="table-item">
-                    <v-row class="edit-btn-container">
-                    <v-btn
-                class="eidt-btn"
+
+            <v-row class="finance-info-display-container mb-13">
+              <h5 class="-title">
+                중복 그룹 설정
+              </h5>
+
+                <div class="prime-limit-table">
+                  <v-row class="prime-limit-table-head" no-gutters>
+                    <v-col class="table-start-end items">
+                      <div>
+                        No.
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        우대금리 한계 명
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        관리
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        1
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+            label="그룹명 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#ffffff"
+                        width="170px"
+                        height="42px"
+                        light
+                        >
+                        삭제
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                                    <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        2
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+            label="그룹명 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#ffffff"
+                        width="170px"
+                        height="42px"
+                        light
+                        >
+                        삭제
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                                    <v-row class="prime-limit-table-row">
+                    <v-col class="table-start-end items">
+                      <div>
+                        3
+                      </div>
+                    </v-col>
+                    <v-col class="items">
+                      <div>
+                        <v-text-field
+        dense
+            label="그룹명 입력"
+            outlined
+            ></v-text-field>
+                      </div>
+                    </v-col>
+                    <v-col class="table-start-end items">
+                      <div>
+                        <v-btn
+                        class="delete-btn"
+                        color="#484746"
+                        width="170px"
+                        height="42px"
+                        dark
+                        >
+                        추가
+                        </v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </div>
+            </v-row>
+
+            <v-row class="radio-submit-btn-container-row" justify="center">
+              <v-col class="radio-submit-btn-container-col" cols="4">
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
+                height="48px"
+                dark
+                color="#ff6934"
+                >
+                  등록
+                </v-btn>
+                <v-btn
+                class="radio-submit-btn"
+                width="97px"
                 height="48px"
                 dark
                 color="#484746"
                 >
-                  편집
+                  닫기
                 </v-btn>
-                    </v-row>
-                  </v-col>
-                </v-row>
-                <v-row class="table-row-height" no-gutters>
-                  <v-col class="rate-table-item-name">
-                    <div>
-                      우대 금리 관리
-                    </div>
-                  </v-col>
-                  <v-col class="rate-table-item">
-                    <div class="prime-add-delete-container">
-                      <v-row class="prime-add">
-                        <v-select
-                        class="prime-select"
-                        dense
-          :items="items"
-          label="우대 금리 선택"
-          outlined
-        ></v-select>
-                      </v-row>
-                    </div>
-                  </v-col>
-                </v-row>
-              </div>
-
+              </v-col>
             </v-row>
+
     </v-container>
 </template>
 
@@ -570,8 +2028,23 @@
 .background {
     background-color: #f8f8f8;
 }
+
 .background > div {
     margin: 0px 50px 0px;
+}
+
+.err-message {
+    margin-top: 11px;
+    height: 22px;
+    float: left;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f32728;
+}
+
+.err-message > .err-img {
+    margin-right: 3px;
+    vertical-align: text-bottom;
 }
 
 .background > .content-header .content-title {
@@ -579,68 +2052,69 @@
 }
 
 .new-btn {
-    font-size: 20px;
-    float: right;
+  float: right;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .search-container {
-    background-color: #ffffff;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
-    padding: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
 }
 
 .-title {
-    font-size: 26px;
-    line-height: 42px;
-    height: 42px;
-    font-weight: 500;
-    margin-bottom: 30px;
+  height: 42px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 42px;
 }
 
 .search-container .search-text-field {
-    display: inline-block;
-    width: 435px;
-    margin: 0px 20px 0px 0px;
+  display: inline-block;
+  width: 435px;
+  margin: 0px 20px 0px 0px;
 }
 
 .search-select1 {
-    display: inline-block;
-    width: 310px;
-    margin: 0px 20px 0px 0px;
-    height: 56px !important;
+  display: inline-block;
+  width: 310px;
+  height: 56px !important;
+  margin: 0px 20px 0px 0px;
 }
 
 .search-select2 {
-    display: inline-block;
-    width: 204px;
-    margin: 0px 20px 0px 0px;
-    height: 56px !important;
+  display: inline-block;
+  width: 204px;
+  height: 56px !important;
+  margin: 0px 20px 0px 0px;
 }
 
 .search-container .search-btn {
-    margin: 0px 10px 0px;
-    font-size: 20px;
-    line-height: 34px;
+  margin: 0px 10px 0px;
+  font-size: 20px;
+  line-height: 34px;
 }
 
 .search-container .clear-btn {
-    font-size: 20px;
-    line-height: 34px;
+  font-size: 20px;
+  line-height: 34px;
 }
 
 .list-container {
-    background-color: #ffffff;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
-    padding: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
 }
 
 .background > .list-container > .list-table-container {
-    width: 100%;
+  width: 100%;
 }
 
 .list-table-margin {
-    margin-bottom: 50px;
-    background-color: #ffffff !important;
+  margin-bottom: 50px;
+  background-color: #ffffff !important;
 }
 
 .hrhrhr {
@@ -663,24 +2137,24 @@
 }
 
 .real-estate-info-container {
+  height: 942px;
+  padding: 50px;
   background-color: #ffffff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
-  padding: 50px;
-  height: 942px;
 }
 
 .-subtitle {
-  font-size: 14px;
   margin: 12px 5px 0px;
+  font-size: 14px;
   color: #121212;
 }
 
 .real-estate-info-table {
   width: 100%;
   height: 360px;
+  margin-bottom: 50px;
   border-top: thin solid #e3e3e3;
   border-left: thin solid #e3e3e3;
-  margin-bottom: 50px;
 }
 
 .table-row {
@@ -695,9 +2169,9 @@
 
 .table-item-name {
   display: flex;
-  background-color: #f5f5f5;
   max-width: 200px;
   max-height: 90px;
+  background-color: #f5f5f5;
   text-align: center;
   align-items: center;
 }
@@ -723,11 +2197,9 @@
 .path-container {
   margin: 21px;
   padding: 0px;
-  height: 48px;
 }
 
 .path-container > .path-select {
-  max-height: 48px;
   max-width: 270px;
   margin: 0px 10px 0px 0px;
 }
@@ -748,30 +2220,30 @@
 }
 
 .edit-btn-container {
+  max-width: 441px;
+  height: 48px;
   margin: 21px;
   padding: 0px;
-  height: 48px;
-  max-width: 441px;
 }
 
 .eidt-btn {
   width: 100%;
   font-weight: normal;
-font-size: 16px;
-line-height: 28px;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .prime-rate-container {
-    background-color: #ffffff;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
-    padding: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
 }
 
 .prime-rate-table {
-    width: 100%;
+  width: 100%;
+  margin-bottom: 50px;
   border-top: thin solid #e3e3e3;
   border-left: thin solid #e3e3e3;
-  margin-bottom: 50px;
 }
 
 .table-row-height {
@@ -786,9 +2258,9 @@ line-height: 28px;
 
 .rate-table-item-name {
   display: flex;
-  background-color: #f5f5f5;
   max-width: 200px;
   max-height: 150px;
+  background-color: #f5f5f5;
   text-align: center;
   align-items: center;
 }
@@ -801,21 +2273,205 @@ line-height: 28px;
   line-height: 30px;
 }
 
-.rate-table-item {
-
-}
-
 .rate-table-item > .prime-add-delete-container {
-
+  margin: 30px 44px 18px 44px;
 }
 
 .prime-select {
-  max-width: 235px;
+  width: 235px;
+}
+
+.prime-text-field {
+  width: 130px;
+}
+
+.tip-btn {
+  font-size: 16px;
+  line-height: 28px;
+  box-shadow: none;
+  font-weight: 400;
+}
+
+.delete-btn {
+  border: thin solid #121212 !important;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.prime-group-select {
+  width: 260px;
+}
+
+.prime-add > div {
+  height: 50px;
+}
+
+.prime-add > .margin-right {
+  margin: 0px 10px 0px 0px;
+}
+
+.add-btn {
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.finance-info-display-container {
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
+}
+
+.use-radio-btn-container {
+  height: 48px;
+  margin: 21px;
+  padding: 0px;
+  justify-content: center;
+}
+
+.use-radio-btn-container > .use-radio-group {
+  width: 100%;
+}
+
+.table-item-last {
+  max-height: 90px;
+  text-align: center;
+  justify-content: center;
+  border-right: none !important;
+}
+
+.table-item-name-invisible {
+  display: flex;
+  max-width: 200px;
+  max-height: 90px;
+  border-right: none !important;
+  border-left: none !important;
+  background-color: #ffffff;
+  text-align: center;
+  align-items: center;
+}
+
+.file-name-field {
+  display: inline-block;
+  max-width: 180px;
+}
+.upload-btn {
+  margin: 0px 10px 0px;
+  font-size: 16px;
+  line-height: 28px;
+  box-shadow: none;
+  font-weight: 400;
+}
+
+.manager-memo-table {
+  width: 100%;
+  height: 220px;
+  margin: 50px 0px 50px;
+  border-top: thin solid #e3e3e3;
+  border-left: thin solid #e3e3e3;
+}
+
+.memo-table-row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 220px;
+}
+
+.memo-table-row > div {
+  border-right: thin solid #e3e3e3;
+  border-bottom: thin solid #e3e3e3;
+}
+
+.memo-item-name {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 220px !important;
+  background-color: #f5f5f5;
+  text-align: center;
+  align-items: center;
+}
+
+.memo-item-name > div {
+  width: 100%;
+  height: auto;
+  margin-top: 65px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.memo-item {
+  display: flex;
+  height: 220px;
+  align-items: center;
+}
+
+.memo-text-area {
+  max-width: 1144px;
+  height: 170px;
+  margin: 0 auto;
+  box-shadow: none !important;
+  border: thin solid #e3e3e3;
+}
+
+.prime-limit-table {
+  width: 100%;
+  border-top: thin solid #e3e3e3;
+  border-left: thin solid #e3e3e3;
+}
+
+.prime-limit-table > .prime-limit-table-head {
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+.items {
+  display: flex;
+  border-right: thin solid #e3e3e3;
+  border-bottom: thin solid #e3e3e3;
+  align-items: center;
+}
+
+.table-start-end {
+  max-width: 200px;
+}
+
+.items > div {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.prime-limit-table > .prime-limit-table-row {
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
 }
 
 </style>
 
 <style>
+.real-estate-info-container .v-messages__message {
+  margin-left: -13px;
+  padding-left: 23px;
+  padding-top: 3px;
+  background-image: url("../../assets/img/err.png");
+  line-height: normal;
+}
+
+.path-container > .v-application .error--text {
+  color: #f56936 !important;
+  caret-color: #f56936 !important;
+}
+
 .list-table-container > .list-table-margin .v-data-table-header {
     background-color: #f8f8f8;
 }
@@ -840,6 +2496,14 @@ line-height: 28px;
   font-size: 20px;
   line-height: 34px;
   color: #121212;
+}
+
+.use-radio-btn-container > .use-radio-group .v-input--radio-group__input {
+  justify-content: space-around;
+}
+
+.memo-text-area textarea {
+  height: 170px;
 }
 
 </style>
