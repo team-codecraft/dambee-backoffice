@@ -2237,7 +2237,7 @@
           no-resize
           counter="50"
         ></v-textarea>
-        <div class="modal-btn-comtainer">
+        <div>
           <v-btn
                 class="modal-btn"
                 dark
@@ -3540,7 +3540,7 @@
                         2021.11.30 12:00
                       </div>
                     </v-col>
-                    <v-col class="items">
+                    <v-col class="edit-items">
                       <div>
                         상품설명서 교체
                       </div>
@@ -4168,7 +4168,7 @@
           no-resize
           counter="300"
         ></v-textarea>
-        <div class="modal-btn-comtainer">
+        <div>
           <v-btn
                 class="modal-btn"
                 dark
