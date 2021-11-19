@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
+import SignIn from '../views/signIn.vue'
 import commonRouter from './common'
+import DefaultLayout from '../layouts/default/index.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'SignIn',
+        component: SignIn
     },
     // {
     //     path: '/about',
@@ -19,9 +20,15 @@ const routes: Array<RouteConfig> = [
     //     // which is lazy-loaded when the route is visited.
     //     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     // },
-    ...commonRouter
+    {
+        path: '/',
+        component: DefaultLayout,
+        children: [
+            ...commonRouter
+        ]
+    },
 ]
-
+console.log(routes)
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
