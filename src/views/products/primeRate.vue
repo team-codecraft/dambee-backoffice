@@ -79,8 +79,8 @@
                                 {{ item.view }}
                             </v-chip>
                         </template>
-                        <template v-slot:[`item.logo`]="{ item }">
-                            <img :src="item.logo" :alt="item.name">
+                        <template v-slot:[`item.logo`]>
+                            <img src="../../assets/img/primeRate_table_img.png">
                         </template>
                     </v-data-table>
                     <div class="pt-2">
@@ -476,37 +476,37 @@
                 {
                     number: 1,
                     name: '4',
-                    logo: '../../assets/img/scbank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
                 {
                     number: 2,
                     name: '3',
-                    logo: '../../assets/img/knbank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
                 {
                     number: 3,
                     name: '2',
-                    logo: '../../assets/img/kbbank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
                 {
                     number: 4,
                     name: '1',
-                    logo: '../../assets/img/wooribank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
                 {
                     number: 5,
                     name: '다자녀',
-                    logo: '../../assets/img/scbank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
                 {
                     number: 6,
                     name: '가족 우대',
-                    logo: '../../assets/img/kakaobank.png',
+                    logo: '../../assets/img/primeRate_table_img.png',
                     view: '조회',
                 },
             ],
@@ -753,6 +753,10 @@
 
 .table-container > .table-margin td {
     border:thin solid #e3e3e3;
+}
+
+.table-container > .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    height: 90px;
 }
 
 </style>

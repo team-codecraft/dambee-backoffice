@@ -80,8 +80,8 @@
                                 {{ item.view }}
                             </v-chip>
                         </template>
-                        <template v-slot:[`item.logo`]="{ item }">
-                            <img :src="item.logo" :alt="item.name">
+                        <template v-slot:[`item.logo`]>
+                            <img src="../../assets/img/kakaobank.png" alt="카카오뱅크">
                         </template>
                     </v-data-table>
                     <div class="pt-2">
@@ -762,6 +762,10 @@
 
 .table-container > .table-margin td {
     border:thin solid #e3e3e3;
+}
+
+.table-container > .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    height: 90px;
 }
 
 </style>
