@@ -564,7 +564,7 @@
     height: 42px;
     margin-bottom: 30px;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 42px;
 }
 
@@ -725,22 +725,22 @@
 }
 
 .edit-items > div {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
 }
 
 .edit-table > .edit-table-row {
-  height: 60px;
-  margin: 0px;
-  padding: 0px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .modal-textarea {
-  margin: 24px;
+    margin: 24px;
 }
 
 </style>
